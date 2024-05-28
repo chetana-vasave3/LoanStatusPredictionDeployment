@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Titanic Project</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+    
+      body {
+          background-color: #333 ;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark text-white">
+        <h3>Titanic Passenger Survived System</h3>
+    </nav>
+    
+
+    <div class="container p-3 my-3 bg-secondary text-white">
+      {% if result %}
+      <p>{{ result }}</p>
+  {% endif %}
+  <form method="post" action="/get_loan_prediction">
+    <label >Married :  </label><br>
+    <input type="radio" id="yes" name="Married" value="1">
+    <label for="1">Yes</label><br>
+      <input type="radio" id="no" name="Married" value="0">
+      <label for="0">No</label><br>
+        <label for="PropertyArea">Property_Area:</label>
+        <select name="PropertyArea" id="Embarked" class="form-control">
+          <option value="Semiurban">Semiurban</option>
+          <option value="Urban">Urban</option>
+          <option value="Rural">Rural</option>
+        </select><br>
+      
+        <label >CreditHistory :  </label><br>
+        <input type="radio" id="yes" name="CreditHistory" value="1.0">
+        <label for="1">1.0</label><br>
+          <input type="radio" id="no" name="CreditHistory" value="0.0">
+          <label for="0">0.0</label><br>
+
+      <label >Education :  </label><br>
+      <input type="radio" id="yes" name="Education" value="1">
+      <label for="1">Yes</label><br>
+        <input type="radio" id="no" name="Education" value="0">
+        <label for="0">No</label>
+    </br>
+      <button class="btn btn-dark" type="submit">Submit</button>
+    </form>
+    </div>
+
+  
+</body>
+</html>
